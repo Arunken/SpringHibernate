@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sat Jan 19 19:58:36 IST 2019
+org.eclipse.jst.jee.server\:/binary\:E\:\\Documents\\Eclipse\ Projects\\Spring\ Hibernate\\4_SpringMVCHibernate\\1_SpringMvcHibernate\\WebContent\\WEB-INF\\lib\\spring-web-5.0.4.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.0.4.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:E\:\\Documents\\Eclipse\ Projects\\Spring\ Hibernate\\4_SpringMVCHibernate\\1_SpringMvcHibernate\\WebContent\\WEB-INF\\lib\\spring-web-5.0.4.RELEASE.jar=WEB-INF/lib/spring-web-5.0.4.RELEASE.jar

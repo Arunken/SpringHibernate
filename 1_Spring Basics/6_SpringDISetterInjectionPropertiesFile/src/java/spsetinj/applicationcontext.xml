@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    
+    <!--load properties file-->
+    <context:property-placeholder location="classpath:spsetinj/myprop.properties"/>
+    
+    <!--    OR
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations" value="classpath:spsetinj/myprop.properties"/>
+    </bean>
+    -->
+    
+    <!-- define your beans here -->
+    
+    
+    <!--define dependency -->
+    <bean id="myfortune"
+          class="spsetinj.HappyFortuneService">
+    </bean>
+    
+    <bean id="mycoach"
+          class="spsetinj.BaseballCoach">
+         
+        <!--setter injection -object-->
+        <property name="fortuneService" ref="myfortune"/>
+        
+        <!--setter injection -literal values-->
+        <property name="emailAddr" value="mail.arunken@gmail.com"/>
+        <property name="team" value="coDerus"/>
+        
+        <!-- importing properties from properties file that is imported above-->
+        <property name="yourNickname" value="${nickname}"/>
+        <property name="yourCrush" value="${crush}"/>
+    </bean>
+    
+    
+
+</beans>
